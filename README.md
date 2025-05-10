@@ -1,2 +1,1 @@
-# JobSeeker
-A JobSeeker app is a mobile &amp; web application designed to help individuals search, apply, and manage employment opportunities efficiently.
+The JobSeeker app is a user-friendly platform that connects job seekers with potential employers. It allows users to create and manage their profiles, upload resumes, search for jobs based on various filters (such as location, industry, and experience), and apply directly through the app. Key features include personalized job recommendations, real-time application tracking, notifications for new opportunities, interview scheduling, and in-app messaging with recruiters. The app aims to simplify and streamline the job search process, empowering users to take control of their career paths.
