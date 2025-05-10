@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Match App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-color:rgb(17, 162, 220);">
+
+<!-- Role Selection -->
+<div class="screen" id="roleScreen">
+  <div class="title">I am a...</div>
+  <button class="button" onclick="setRole('client')">Client</button>
+  <button class="button" onclick="setRole('labour')">Labour</button>
+</div>
+
+<!-- Sign In / Sign Up -->
+<div class="screen" id="authScreen" style="display:none">
+  <button class="back-button" onclick="showScreen('roleScreen')">←</button>
+  <div class="title">Choose Option</div>
+  <button class="button" onclick="showScreen('signInScreen')">Sign In</button>
+  <button class="button" onclick="showScreen('signUpScreen')">Sign Up</button>
+</div>
+
+<!-- Sign In -->
+<div class="screen" id="signInScreen" style="display:none">
+  <button class="back-button" onclick="showScreen('authScreen')">←</button>
+  <div class="title">Sign In</div>
+  <input class="input-field" type="email" placeholder="Enter Email" id="signInEmail">
+  <button class="button" onclick="signIn()">Continue</button>
+</div>
+
+<!-- Sign Up -->
+<div class="screen" id="signUpScreen" style="display:none">
+  <button class="back-button" onclick="showScreen('authScreen')">←</button>
+  <div class="title">Sign Up</div>
+  <input class="input-field" type="text" placeholder="Name" id="signUpName">
+  <input class="input-field" type="number" placeholder="Age" id="signUpAge">
+  <input class="input-field" type="text" placeholder="Location" id="signUpLocation">
+  <input class="input-field" type="email" placeholder="Email" id="signUpEmail">
+  <button class="button" onclick="signUp()">Create Account</button>
+</div>
+
+<!-- Client Dashboard -->
+<div class="screen" id="clientScreen" style="display:none">
+  <button class="back-button" onclick="showScreen('roleScreen')">←</button>
+  <div class="title">Post a Job</div>
+  <select class="input-field" id="jobType">
+    <option value="">Select Job Type</option>
+    <option value="Construction">Construction</option>
+    <option value="Cleaning">Cleaning</option>
+    <option value="Delivery">Delivery</option>
+  </select>
+  <textarea class="input-field" id="jobDescription" placeholder="Job Description"></textarea>
+  <input class="input-field" id="jobLocation" type="text" placeholder="Location">
+  <input class="input-field" id="jobWage" type="number" placeholder="Wage (in Rs)">
+  <input class="input-field" id="jobPhone" type="text" placeholder="Phone Number">
+  <button class="button" onclick="addJob()">Add Post</button>
+
+  <div class="title">Your Posts</div>
+  <div id="jobList"></div>
+</div>
+
+<!-- Labour View -->
+<div class="screen" id="labourScreen" style="display:none">
+  <button class="back-button" onclick="showScreen('roleScreen')">←</button>
+  <div class="title">Available Jobs</div>
+  <div id="availableJobs"></div>
+</div>
+
+<script src="script.js"></script>
+</body> 
+</html>
